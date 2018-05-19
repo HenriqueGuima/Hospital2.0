@@ -7,21 +7,32 @@ namespace Hospital20
 {
     public class Paciente
     {
-        double saldo;
+        //double saldo;
         int nif;
         int cc;
         string nome;
         int idade;
         bool adse;
+        internal int id;
 
         public Paciente()
         {
-            saldo = 0.0;
+            //saldo = 0.0;
             nif = 000000000;
             cc = 00000000;
             nome = "";
             idade = 0;
             adse = false;
+        }
+
+        internal object GetId()
+        {
+            return this.id;
+        }
+
+        public void SetId(int id)
+        {
+            this.id = id;
         }
 
         /// <summary>
@@ -33,9 +44,9 @@ namespace Hospital20
         /// <param name="Onome"></param>
         /// <param name="Oidade"></param>
         /// <param name="Oadse"></param>
-        public Paciente(double Osaldo, int Onif, int Occ, string Onome, int Oidade, bool Oadse)
+        public Paciente(/*double Osaldo*/ int Onif, int Occ, string Onome, int Oidade, bool Oadse)
         {
-            saldo = Osaldo;
+            //saldo = Osaldo;
             Onif = nif;
             Occ = cc;
             Onome = nome;
@@ -43,7 +54,7 @@ namespace Hospital20
             Oadse = adse;
         }
 
-        public double Saldo { get {return saldo; } set {saldo = value; } }
+        //public double Saldo { get {return saldo; } set {saldo = value; } }
         public int NIF { get {return nif; } set {nif = value; } }
         public int CC { get {return cc; } set {cc = value; } }
         public string Nome { get {return nome; } set {nome = value; } }

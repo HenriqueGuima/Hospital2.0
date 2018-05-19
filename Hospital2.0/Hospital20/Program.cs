@@ -7,11 +7,17 @@ namespace Hospital20
     {
         static void Main(string[] args)
         {
-            Hospital h;
-            h = new Hospital();
 
-            Cardiologista Cardio = new Cardiologista("Matias", 45, "Masculino", 9.000, "Cirurgião");
-            IOrgaosVitais iCardio = Cardio;
+            Menu m = new Menu();
+            m.UI();
+
+            //Hospital h;
+            //h = new Hospital();
+
+            //Cardiologista Cardio = new Cardiologista("Matias", 45, "Masculino", 9.000, "Cirurgião");
+            //IOrgaosVitais iCardio = Cardio;
+
+
 
             //Paciente p2 = new Paciente();
             //Cria uma nova Hastable de pacientes pré-definida
