@@ -11,6 +11,8 @@ namespace Hospital20
 
         Registo reg = new Registo();
 
+        List<Staff> st = new List<Staff>();
+
 
         /// <summary>
         /// Construtor por omissão

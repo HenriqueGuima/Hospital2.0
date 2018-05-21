@@ -54,6 +54,7 @@ namespace Hospital20
 
         internal int Info(string fileName)
         {
+            
             int lid = 0;
             StreamReader sr = new StreamReader(fileName);
             string line;

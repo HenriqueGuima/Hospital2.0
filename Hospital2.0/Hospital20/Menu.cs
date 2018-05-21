@@ -17,7 +17,7 @@ namespace Hospital20
             do
             {
                 Console.WriteLine("----- Bem-vindo ----");
-                Console.WriteLine("1 - Registar Paciente");
+                Console.WriteLine("1 - Marcar Consulta");
                 Console.WriteLine("2 - Listar Pacientes");
                 Console.WriteLine("3 - Atualizar Pacientes");
                 //Console.WriteLine("4 - Novo Médico");
@@ -33,6 +33,7 @@ namespace Hospital20
                         break;
                     case 2:
                         h.MostraFicha();
+                        
                         break;
                     case 3:
                         break;
@@ -51,7 +52,7 @@ namespace Hospital20
             int op;
 
             Console.Clear();
-            Console.WriteLine("----- Resgistar Novo Paciente ----");
+            Console.WriteLine("----- Registar Novo Paciente ----");
             Console.WriteLine("Em que área?");
             Console.WriteLine("1 - Cardiologia");
             Console.WriteLine("2 - Neurologia");
@@ -75,10 +76,27 @@ namespace Hospital20
                     Console.Write("NIF: ");
                     int nif = Int32.Parse(Console.ReadLine());
                     Console.Write("ADSE: ");
-                    bool adse = bool.Parse(Console.ReadLine());
+                    bool adse = false;
+                    string valadse = Console.ReadLine();
+
+                    if (valadse == "sim" || valadse == "Sim")
+                    {
+                        adse = true;
+                        Console.WriteLine(valadse);
+                    }
+                    else
+                    {
+                        adse = false;
+                    }
 
                     Paciente pc = new Paciente(nif, cc, n, i, adse);
                     h.AdicionaP(pc);
+                    
+                    string path = "ConsultasCardiologia.txt";
+                    Registo r = new Registo();
+                    r.AdicionaPacienteRegisto(pc, 1);
+                    h.GuardaFichas(path);
+                    r.GuardaFichas(path);
                     break;
                 case 2:
                     Console.WriteLine("----- Resgisto de um novo paciente em NEUROLOGIA ----");
