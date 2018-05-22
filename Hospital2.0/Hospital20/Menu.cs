@@ -8,10 +8,11 @@ namespace Hospital20
     class Menu
     {
         Hospital h;
-
+        
         public void UI()
         {
             h = new Hospital();
+            h.LeFichas("Consultas.txt");
             int op;
 
             do
@@ -24,27 +25,33 @@ namespace Hospital20
                 Console.WriteLine("0 - Exit");
 
                 Console.WriteLine("Opção: ");
+
                 op = Convert.ToInt32(Console.ReadLine());
+
 
                 switch (op)
                 {
                     case 1:
                         RegistaPacientes();
+                        h.GuardaFichas("Consultas.txt");
                         break;
                     case 2:
                         h.MostraFicha();
-                        
                         break;
                     case 3:
                         break;
                     case 4:
                         break;
+                    case 0:
+                        break;
                     default:
-                        Console.WriteLine("Opção inválida.");
+                        //Console.WriteLine("Opção inválida.");
                         break;
                 }
 
             } while (op != 0);
+
+            h.GuardaFichas("Consultas.txt");
         }
 
         public void RegistaPacientes()
@@ -89,17 +96,18 @@ namespace Hospital20
                         adse = false;
                     }
 
-                    Paciente pc = new Paciente(nif, cc, n, i, adse);
+                    Paciente pc = new Paciente(0, 0, "nome", 0, true);
+
                     h.AdicionaP(pc);
                     
-                    string path = "ConsultasCardiologia.txt";
-                    Registo r = new Registo();
-                    r.AdicionaPacienteRegisto(pc, 1);
-                    h.GuardaFichas(path);
-                    r.GuardaFichas(path);
+                    //string path = "ConsultasCardiologia.txt";
+                    //Registo r = new Registo();
+                    //r.AdicionaPacienteRegisto(pc, 1);
+                    //h.GuardaFichas(path);
+                    //r.GuardaFichas(path);
                     break;
                 case 2:
-                    Console.WriteLine("----- Resgisto de um novo paciente em NEUROLOGIA ----");
+                    Console.WriteLine("----- Registo de um novo paciente em NEUROLOGIA ----");
                     Console.Write("Nome: ");
                     string nn = Console.ReadLine();
                     Console.Write("Idade: ");

@@ -4,18 +4,23 @@ using System.Text;
 
 namespace Hospital20
 {
-    class Médicos : Staff
+    class Médico : Staff
     {
         internal double Salario;
 
+        
+        
+        
+
         /// <summary>
-        /// Construtor para Médicos
+        /// Construtor para Médico
         /// </summary>
         /// <param name="Mnome">Nome</param>
         /// <param name="Midade">Idade</param>
         /// <param name="Msexo">Sexo</param>
         /// <param name="salario">Salário</param>
-        public Médicos(string Mnome, int Midade, string Msexo, double salario)
+        /// 
+        public Médico(string Mnome, int Midade, string Msexo, double salario)
         {
             base.nome = Mnome;
             base.idade = Midade;

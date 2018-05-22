@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Collections;
+using System.Linq;
 
 namespace Hospital20
 {
-    abstract class Staff
+    class Staff
     {
         internal string nome;
         internal int idade;
@@ -18,5 +20,7 @@ namespace Hospital20
 
             return s;
         }
+
+        
     }
 }

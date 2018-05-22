@@ -4,7 +4,12 @@ using System.Text;
 
 namespace Hospital20
 {
-    class RoomManager
+    public class RoomManager<R>
     {
+        protected IList<R> r_list = new List<R>();
+
+        public virtual void Add(R item) { }
+        public virtual void Remove(R item) { }
+        //public virtual int Find(R item) { }
     }
 }

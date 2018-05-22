@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hospital20
 {
-    class Cardiologista : Médicos, IOrgaosVitais
+    class Cardiologista : Médico, IOrgaosVitais
     {
         /// <summary>
         /// Especialização 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Collections;
 
 namespace Hospital20
 {
@@ -11,14 +12,19 @@ namespace Hospital20
 
         Registo reg = new Registo();
 
-        List<Staff> st = new List<Staff>();
-
+        List<Staff> stafflist = new List<Staff>();
 
         /// <summary>
         /// Construtor por omissão
         /// </summary>
         public Hospital() 
         {
+            var staff1 = new Staff();
+            stafflist.Add(staff1);
+            foreach (var st in stafflist)
+            {
+                Console.WriteLine("Staff: {0}", staff1.nome);
+            }
             compartimentos = 200;
         }
 

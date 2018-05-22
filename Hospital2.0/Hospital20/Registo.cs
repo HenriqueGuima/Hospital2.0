@@ -34,9 +34,9 @@ namespace Hospital20
             Console.ReadLine();
         }
 
-        internal void GuardaFichas(string fileName)
+        internal void GuardaFichas(string filename)
         {
-            StreamWriter sw = File.CreateText(fileName);
+            StreamWriter sw = File.CreateText(filename);
 
             foreach (DictionaryEntry de in fichas)
             {
