@@ -70,22 +70,27 @@ namespace Hospital20
             Console.Write("Introduza uma opção: ");
             op = Convert.ToInt32(Console.ReadLine());
 
+            string n;
+            int i;
+            int cc;
+            int nif;
+            bool adse;
             switch (op)
             {
                 case 1:
                     Console.WriteLine("----- Resgisto de um novo paciente em CARDIOLOGIA ----");
                     Console.Write("Nome: ");
-                    string n = Console.ReadLine();
+                    n = Console.ReadLine();
                     Console.Write("Idade: ");
-                    int i = Int32.Parse(Console.ReadLine());
+                    i = Int32.Parse(Console.ReadLine());
                     Console.Write("CC: ");
-                    int cc = Int32.Parse(Console.ReadLine());
+                    cc = Int32.Parse(Console.ReadLine());
                     Console.Write("NIF: ");
-                    int nif = Int32.Parse(Console.ReadLine());
+                    nif = Int32.Parse(Console.ReadLine());
                     Console.Write("ADSE: ");
-                    bool adse = false;
+                    adse = false;
                     string valadse = Console.ReadLine();
-
+                    
                     if (valadse == "sim" || valadse == "Sim")
                     {
                         adse = true;
@@ -96,7 +101,7 @@ namespace Hospital20
                         adse = false;
                     }
 
-                    Paciente pc = new Paciente(0, 0, "nome", 0, true);
+                    Paciente pc = new Paciente(nif, cc, n, i, adse);
 
                     h.AdicionaP(pc);
                     
