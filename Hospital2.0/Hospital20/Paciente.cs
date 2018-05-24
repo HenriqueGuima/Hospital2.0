@@ -18,21 +18,11 @@ namespace Hospital20
         public Paciente()
         {
             //saldo = 0.0;
-            nif = 000000000;
-            cc = 00000000;
+            nif = 0;
+            cc = 0;
             nome = "";
             idade = 0;
             adse = false;
-        }
-
-        internal object GetId()
-        {
-            return this.id;
-        }
-
-        public void SetId(int id)
-        {
-            this.id = id;
         }
 
         /// <summary>
@@ -54,6 +44,18 @@ namespace Hospital20
             Oadse = adse;
         }
 
+        internal object GetId()
+        {
+            return this.id;
+        }
+
+        public void SetId(int id)
+        {
+            this.id = id;
+        }
+
+        
+
         //public double Saldo { get {return saldo; } set {saldo = value; } }
         public int NIF { get {return nif; } set {nif = value; } }
         public int CC { get {return cc; } set {cc = value; } }
@@ -61,4 +63,14 @@ namespace Hospital20
         public int Idade{ get {return idade; } set {idade = value; } }
         public bool ADSE{ get {return adse; } set {adse = value; } }
     }
+
+    //public string InscrevePaciente(int nif, int cc, string nome, int idd, bool adse)
+    //{
+    //    List<Paciente> pcs = new List<Paciente>();
+    //    Console.WriteLine("Nome: ");
+    //    nome = Console.ReadLine();
+    //    pcs.Add(new Paciente { Nome = nome });
+
+    //    return pcs;
+    //}
 }
