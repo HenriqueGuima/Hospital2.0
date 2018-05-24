@@ -44,14 +44,13 @@ namespace Hospital20
         /// <param name="Onome"></param>
         /// <param name="Oidade"></param>
         /// <param name="Oadse"></param>
-        public Paciente(/*double Osaldo*/ int Onif, int Occ, string Onome, int Oidade, bool Oadse)
+        public Paciente(int nif, int cc, string nome, int idade, bool adse)
         {
-            //saldo = Osaldo;
-            Onif = nif;
-            Occ = cc;
-            Onome = nome;
-            Oidade = idade;
-            Oadse = adse;
+            this.nif = nif;
+            this.cc = cc;
+            this.nome = nome;
+            this.idade = idade;
+            this.adse = adse;
         }
 
         //public double Saldo { get {return saldo; } set {saldo = value; } }
