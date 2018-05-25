@@ -101,15 +101,15 @@ namespace Hospital20
                         adse = false;
                     }
 
+                    Registo r = new Registo();
                     Paciente pc = new Paciente(nif, cc, n, i, adse);
 
                     h.AdicionaP(pc);
+
+                    Console.WriteLine(pc);
+
+                    string path = "Consultas.txt";
                     
-                    //string path = "ConsultasCardiologia.txt";
-                    //Registo r = new Registo();
-                    //r.AdicionaPacienteRegisto(pc, 1);
-                    //h.GuardaFichas(path);
-                    //r.GuardaFichas(path);
                     break;
                 case 2:
                     Console.WriteLine("----- Registo de um novo paciente em NEUROLOGIA ----");

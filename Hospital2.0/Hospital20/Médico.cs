@@ -4,13 +4,9 @@ using System.Text;
 
 namespace Hospital20
 {
-    class Médico : Staff
+    public class Médico : Staff
     {
         internal double Salario;
-
-        
-        
-        
 
         /// <summary>
         /// Construtor para Médico

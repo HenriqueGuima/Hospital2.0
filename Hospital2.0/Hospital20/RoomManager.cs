@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Text;
 
 namespace Hospital20
 {
-    public class RoomManager<R>
+    
+    public class RoomManager
     {
-        protected IList<R> r_list = new List<R>();
+        Hashtable rm;
 
-        public virtual void Add(R item) { }
-        public virtual void Remove(R item) { }
-        //public virtual int Find(R item) { }
+        public RoomManager()
+        {
+            rm = new Hashtable
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Hospital20
 {
-    class Staff
+    public class Staff
     {
         internal string nome;
         internal int idade;
