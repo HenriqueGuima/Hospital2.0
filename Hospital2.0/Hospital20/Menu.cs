@@ -54,6 +54,53 @@ namespace Hospital20
             h.GuardaFichas("Consultas.txt");
         }
 
+        public void RegistaMedico()
+        {
+            string nome, sexo, especialidade;
+            int idade;
+            double salario;
+            Médico m = new Médico("", 0, "", 0, "");
+
+            Console.Write("Nome: ");
+            nome = Console.ReadLine();
+            Console.Write("Idade: ");
+            idade = int.Parse(Console.ReadLine());
+            Console.Write("Sexo: ");
+            sexo = Console.ReadLine();
+
+            int op;
+            Console.WriteLine("Em que área?");
+            Console.WriteLine("1 - Cardiologia");
+            Console.WriteLine("2 - Neurologia");
+            Console.WriteLine("3 - Psicologia");
+            Console.WriteLine("4 - Pediatria");
+            Console.WriteLine("0 - Exit");
+            op = int.Parse(Console.ReadLine());
+
+            switch(op)
+            {
+                case 1:
+                    especialidade = "Cardiologia";
+                    salario = 3000;
+                    m = new Médico(nome, idade, sexo, salario, especialidade);
+                    break;
+                case 2:
+                    especialidade = "Neurologia";
+                    salario = 3200;
+                    m = new Médico(nome, idade, sexo, salario, especialidade);
+                    break;
+                case 3:
+                    especialidade = "Psicologia";
+                    salario = 2800;
+                    m = new Médico(nome, idade, sexo, salario, especialidade);
+                    break;
+                case 4:
+                    especialidade = "Pediatria";
+                    salario = 2500;
+                    m = new Médico(nome, idade, sexo, salario, especialidade);
+                    break;
+            }
+        }
         public void RegistaPacientes()
         {
             int op;
@@ -101,8 +148,12 @@ namespace Hospital20
                         adse = false;
                     }
 
-                    Registo r = new Registo();
+                    //Consulta c = new Consulta();
+                    DateTime dt = DateTime.Today.Date;
                     Paciente pc = new Paciente(nif, cc, n, i, adse);
+                    Consulta c = new Consulta();
+                    
+                    c.newConsulta(pc, m, dt);
 
                     h.AdicionaP(pc);
 

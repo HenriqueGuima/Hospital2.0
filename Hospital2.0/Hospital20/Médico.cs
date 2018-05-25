@@ -7,6 +7,7 @@ namespace Hospital20
     public class Médico : Staff
     {
         internal double Salario;
+        internal string especialidade;
 
         /// <summary>
         /// Construtor para Médico
@@ -16,11 +17,12 @@ namespace Hospital20
         /// <param name="Msexo">Sexo</param>
         /// <param name="salario">Salário</param>
         /// 
-        public Médico(string Mnome, int Midade, string Msexo, double salario)
+        public Médico(string nome, int idade, string sexo, double salario, string especialidade)
         {
-            base.nome = Mnome;
-            base.idade = Midade;
-            base.sexo = Msexo;
+            base.nome = nome;
+            base.idade = idade;
+            base.sexo = sexo;
+            this.especialidade = especialidade;
             this.Salario = salario;
         }
 

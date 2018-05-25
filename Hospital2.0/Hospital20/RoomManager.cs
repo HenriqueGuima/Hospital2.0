@@ -12,7 +12,8 @@ namespace Hospital20
 
         public RoomManager()
         {
-            rm = new Hashtable
+            rm = new Hashtable();
+            Room r = new Room();
         }
     }
 }
