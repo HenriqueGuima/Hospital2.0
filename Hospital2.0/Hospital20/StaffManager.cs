@@ -34,7 +34,7 @@ namespace Hospital20
 
         public void AddMedico(Médico m)
         {
-            Médico medic = new Médico("", 0, "", 0.0);
+            Médico medic = new Médico("", 0, "", 0.0, "");
             stf.Add(m, medic);
             //Console.WriteLine(medic);
         }
