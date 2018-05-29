@@ -11,6 +11,7 @@ namespace Hospital20
         internal string nome;
         internal int idade;
         internal string sexo;
+        internal List<Medico> Medicos;
 
         public override string ToString()
         {

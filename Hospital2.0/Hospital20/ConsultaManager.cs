@@ -13,9 +13,10 @@ namespace Hospital20
         {
             cm = new Hashtable();
             Consulta c = new Consulta();
+
         }
 
-        public void AddConsulta(Consulta cl, Médico m, Paciente p)
+        public void AddConsulta(Consulta cl, Medico m, Paciente p)
         {
             cm.Add(cl, cm);
         }

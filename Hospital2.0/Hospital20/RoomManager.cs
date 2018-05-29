@@ -13,10 +13,10 @@ namespace Hospital20
         public RoomManager()
         {
             rm = new Hashtable();
-            Room r = new Room();
+            //Room r = new Room();
         }
 
-        public void AddRoom(int num, Médico m, Paciente p)
+        public void AddRoom(int num, Medico m, Paciente p)
         {
             Room r = new Room(num, m, p);
         }

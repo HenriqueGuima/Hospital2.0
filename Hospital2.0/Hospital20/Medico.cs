@@ -4,26 +4,32 @@ using System.Text;
 
 namespace Hospital20
 {
-    public class Médico : Staff
+    public class Medico : Staff
     {
-        internal double Salario;
+        internal double salario;
         internal string especialidade;
+
+        
 
         /// <summary>
         /// Construtor para Médico
         /// </summary>
-        /// <param name="Mnome">Nome</param>
-        /// <param name="Midade">Idade</param>
-        /// <param name="Msexo">Sexo</param>
+        /// <param name="nome">Nome</param>
+        /// <param name="idade">Idade</param>
+        /// <param name="sexo">Sexo</param>
         /// <param name="salario">Salário</param>
         /// 
-        public Médico(string nome, int idade, string sexo, double salario, string especialidade)
+        public Medico(string nome, int idade, string sexo, double salario, string especialidade)
         {
             base.nome = nome;
             base.idade = idade;
             base.sexo = sexo;
             this.especialidade = especialidade;
-            this.Salario = salario;
+            this.salario = salario;
+        }
+
+        public Medico()
+        {
         }
 
         public override string ToString()
@@ -32,6 +38,9 @@ namespace Hospital20
             s += "Salário: " + this.Salario + "\n";
             return s;
         }
+
+        public string Salario { get; set; }
+        //public IList<Medico> Medicos{ get; set; }
 
         //public override double GetSalario()
         //{

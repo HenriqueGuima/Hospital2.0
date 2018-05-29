@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hospital20
 {
-    class Cardiologista : Médico, IOrgaosVitais
+    class Cardiologista : Medico, IOrgaosVitais
     {
         /// <summary>
         /// Especialização 
@@ -19,7 +19,7 @@ namespace Hospital20
         /// <param name="Cidade">Idade</param>
         /// <param name="Csexo">Sexo</param>
         /// <param name="Csalario">Salario</param>
-        public Cardiologista(string Cnome, int Cidade, string Csexo, double Csalario, string esp) : base(Cnome, Cidade, Csexo, Csalario)
+        public Cardiologista(string Cnome, int Cidade, string Csexo, double Csalario, string esp) : base(Cnome, Cidade, Csexo, Csalario, esp)
         {
             this.Esp = esp;
         }

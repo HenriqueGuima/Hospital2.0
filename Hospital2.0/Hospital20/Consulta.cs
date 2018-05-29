@@ -6,7 +6,7 @@ namespace Hospital20
 {
     public class Consulta
     {
-        public void newConsulta(Paciente p, Médico m, DateTime dt)
+        public void newConsulta(Paciente p, Medico m, DateTime dt)
         {
 
         }
