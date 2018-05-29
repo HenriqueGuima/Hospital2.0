@@ -9,8 +9,6 @@ namespace Hospital20
         internal double salario;
         internal string especialidade;
 
-        
-
         /// <summary>
         /// Construtor para Médico
         /// </summary>
@@ -30,6 +28,11 @@ namespace Hospital20
 
         public Medico()
         {
+        }
+
+        public void MostraDadosMedico()
+        {
+            Console.WriteLine("\n Nome: " + this.nome + "\nIdade: " + this.idade + "\nEspecialidade: " + this.especialidade + "\nSexo: " + this.sexo + "\nSalário base: " + this.salario);
         }
 
         public override string ToString()

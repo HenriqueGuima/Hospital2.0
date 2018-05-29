@@ -20,7 +20,7 @@ namespace Hospital20
                 Console.WriteLine("----- Bem-vindo ----");
                 Console.WriteLine("1 - Marcar Consulta");
                 Console.WriteLine("2 - Listar Pacientes");
-                Console.WriteLine("3 - Atualizar Pacientes");
+                Console.WriteLine("3 - Registar Médico");
                 //Console.WriteLine("4 - Novo Médico");
                 Console.WriteLine("0 - Exit");
 
@@ -39,6 +39,7 @@ namespace Hospital20
                         h.MostraFicha();
                         break;
                     case 3:
+                        RegistaMedico();
                         break;
                     case 4:
                         break;
@@ -59,7 +60,7 @@ namespace Hospital20
             string nome, sexo, especialidade;
             int idade;
             double salario;
-            Medico m = new Medico("", 0, "", 0, "");
+            
 
             Console.Write("Nome: ");
             nome = Console.ReadLine();
@@ -82,22 +83,31 @@ namespace Hospital20
                 case 1:
                     especialidade = "Cardiologia";
                     salario = 3000;
-                    m = new Medico(nome, idade, sexo, salario, especialidade);
+                    Medico mc = new Medico("", 0, "", 0, "");
+                    mc = new Medico(nome, idade, sexo, salario, especialidade);
+                    mc.MostraDadosMedico();
+                    Medico m1 = mc;
                     break;
                 case 2:
                     especialidade = "Neurologia";
                     salario = 3200;
-                    m = new Medico(nome, idade, sexo, salario, especialidade);
+                    Medico mn = new Medico("", 0, "", 0, "");
+                    mn = new Medico(nome, idade, sexo, salario, especialidade);
+                    mn.MostraDadosMedico();
                     break;
                 case 3:
                     especialidade = "Psicologia";
                     salario = 2800;
-                    m = new Medico(nome, idade, sexo, salario, especialidade);
+                    Medico mp = new Medico("", 0, "", 0, "");
+                    mp = new Medico(nome, idade, sexo, salario, especialidade);
+                    mp.MostraDadosMedico();
                     break;
                 case 4:
                     especialidade = "Pediatria";
                     salario = 2500;
-                    m = new Medico(nome, idade, sexo, salario, especialidade);
+                    Medico mpd = new Medico("", 0, "", 0, "");
+                    mpd = new Medico(nome, idade, sexo, salario, especialidade);
+                    mpd.MostraDadosMedico();
                     break;
             }
         }
@@ -154,7 +164,7 @@ namespace Hospital20
 
                     Medico m = new Medico();
                     Medico refm = m;
-                    refm.
+                    //refm. = ;
 
                     c.newConsulta(pc, m, dt);
 

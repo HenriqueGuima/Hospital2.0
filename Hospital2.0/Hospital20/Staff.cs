@@ -13,6 +13,21 @@ namespace Hospital20
         internal string sexo;
         internal List<Medico> Medicos;
 
+        public Staff()
+        {
+            nome = "";
+            idade = 0;
+            sexo = "";
+
+        }
+
+        public Staff(string nome, int idade, string sexo)
+        {
+            this.nome = nome;
+            this.idade = idade;
+            this.sexo = sexo;
+        }
+
         public override string ToString()
         {
             string s = "Nome: " + this.nome + "\n";
@@ -22,6 +37,5 @@ namespace Hospital20
             return s;
         }
 
-        
     }
 }

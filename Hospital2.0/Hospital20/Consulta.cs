@@ -8,7 +8,7 @@ namespace Hospital20
     {
         public void newConsulta(Paciente p, Medico m, DateTime dt)
         {
-
+           
         }
     }
 }
