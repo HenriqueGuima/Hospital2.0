@@ -8,6 +8,7 @@ namespace Hospital20
     internal class StaffManager
     {
         Hashtable stf;
+        private List<Medico> med;
 
         public StaffManager()
         {
@@ -17,18 +18,27 @@ namespace Hospital20
             //    staff.Add(new Staff());
             //}
 
-            stf = new Hashtable();
+            //stf = new Hashtable();
 
-            Staff s = new Staff();
+            var stf = new List<Staff>();
 
-            foreach (DictionaryEntry item in stf)
-            {
-                string name = (string)item.Key;
-                int age = (int)item.Value;
-                Console.WriteLine("Name: {0}, Age: {1}", name, age);
-            }
+            //Staff s = new Staff();
+
+            //foreach (DictionaryEntry item in stf)
+            //{
+            //    string name = (string)item.Key;
+            //    int age = (int)item.Value;
+            //    Console.WriteLine("Name: {0}, Age: {1}", name, age);
+            //}
 
             //stf.Add(, stf);
+
+            var staff = new Staff
+            {
+                Medicos = med,
+
+            };
+            stf.Add(staff);
 
         }
 

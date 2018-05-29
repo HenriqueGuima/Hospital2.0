@@ -4,26 +4,33 @@ using System.Text;
 
 namespace Hospital20
 {
+    /// <summary>
+    /// Classe que constrói o objeto cardiologista
+    /// </summary>
     class Cardiologista : Medico, IOrgaosVitais
     {
         /// <summary>
         /// Especialização 
         /// Cirurgião, Supervisor, Intervencionista
         /// </summary>
-        internal string Esp;
+        internal string esp;
 
         /// <summary>
         /// Construtor para Cardiologista
         /// </summary>
-        /// <param name="Cnome">Nome</param>
-        /// <param name="Cidade">Idade</param>
-        /// <param name="Csexo">Sexo</param>
-        /// <param name="Csalario">Salario</param>
-        public Cardiologista(string Cnome, int Cidade, string Csexo, double Csalario, string esp) : base(Cnome, Cidade, Csexo, Csalario, esp)
+        /// <param name="nome">Nome</param>
+        /// <param name="idade">Idade</param>
+        /// <param name="sexo">Sexo</param>
+        /// <param name="salario">Salario</param>
+        public Cardiologista(string nome, int idade, string sexo, double salario, string esp) : base(nome, idade, sexo, salario, esp)
         {
-            this.Esp = esp;
+            this.esp = esp;
         }
 
+        /// <summary>
+        /// Retornar os valores inseridos para cardiologista
+        /// </summary>
+        /// <returns></returns>
         public string Orgao()
         {
             StringBuilder Cardio = new StringBuilder();
@@ -32,8 +39,8 @@ namespace Hospital20
             Cardio.AppendLine(nome);
             Cardio.AppendLine(idade.ToString());
             Cardio.AppendLine(sexo);
-            Cardio.AppendLine(Salario.ToString());
-            Cardio.AppendLine(Esp);
+            Cardio.AppendLine(salario.ToString());
+            Cardio.AppendLine(esp);
 
             //return "Coração";
             return Cardio.ToString();

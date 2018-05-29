@@ -17,6 +17,7 @@ namespace Hospital20
 
             do
             {
+                Console.Clear();
                 Console.WriteLine("----- Bem-vindo ----");
                 Console.WriteLine("1 - Marcar Consulta");
                 Console.WriteLine("2 - Listar Pacientes");
@@ -55,7 +56,7 @@ namespace Hospital20
             h.GuardaFichas("Consultas.txt");
         }
 
-        public void RegistaMedico()
+        public void RegistaMedico( /*ref string MedicoN, ref int MedicoI, ref string MedicoS, ref double MedicoSL, ref string MedicoE*/)
         {
             string nome, sexo, especialidade;
             int idade;
@@ -83,10 +84,12 @@ namespace Hospital20
                 case 1:
                     especialidade = "Cardiologia";
                     salario = 3000;
+                    //Medico mc;
+                    //mc = new Medico(MedicoN, MedicoI, MedicoS, MedicoSL, MedicoE);
                     Medico mc = new Medico("", 0, "", 0, "");
                     mc = new Medico(nome, idade, sexo, salario, especialidade);
                     mc.MostraDadosMedico();
-                    Medico m1 = mc;
+                    //Medico m1 = mc;
                     break;
                 case 2:
                     especialidade = "Neurologia";
@@ -159,6 +162,8 @@ namespace Hospital20
                     }
 
                     DateTime dt = DateTime.Today.Date;
+                    //dt.AddHours(1);
+                    dt.AddDays(1);
                     Paciente pc = new Paciente(nif, cc, n, i, adse);
                     Consulta c = new Consulta();
 
@@ -170,9 +175,16 @@ namespace Hospital20
 
                     h.AdicionaP(pc);
 
-                    Console.WriteLine(pc);
+                    //pc.ToString();
+
+                    //Console.WriteLine(pc);
+                    Console.WriteLine("\nNome: " + pc.Nome + "\nIdade: " + pc.Idade + "\nCartão de Cidadão: " + pc.CC + "\nNIF: " + pc.NIF + "\nADSE: " + pc.ADSE);
+                    Console.WriteLine("Consulta Marcada para " + dt);
+                    //Console.WriteLine("Nome: " + n + "\nIdade: " + i + "\nCartão de Cidadão: " + cc + "\nNIF: " + nif + "\nADSE: " + adse);
 
                     string path = "Consultas.txt";
+
+                    Console.ReadKey();
                     
                     break;
                 case 2:
